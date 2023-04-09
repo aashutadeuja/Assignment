@@ -1,0 +1,306 @@
+.menu-btn {
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  top: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    background: black;
+    margin: 0 0 5px 0;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: scale(-1, 1); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+  background: #aaf4f9;
+  width: 100%;
+  height: 59px; }
+  .menu.show {
+    visibility: visible; }
+  .menu .menu-nav {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    border-radius: 50px 20px;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .menu-nav .nav-item {
+      display: inline-block;
+      margin: 0 80px;
+      line-height: 68px;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      text-decoration: none;
+      transition: all 0.5s ease-out; }
+  .menu a.nav-item, .menu a:hover {
+    border: 2px solid #0d0256;
+    background: #41e8d4;
+    transition: all 0.5s ease-out; }
+  .menu .nav-link {
+    border-radius: 40px  30px;
+    padding: 7px 6px;
+    color: #4405d7; }
+
+@media screen and (max-width: 1171px) {
+  .project {
+    grid-template-columns: repeat(5, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .project {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  .container .email-signature {
+    flex-flow: column;
+    width: 90%; }
+  .container .email-signature .content {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0; }
+  .container .email-signature .content .contact li {
+    text-align: left; }
+  nav ul {
+    position: fixed;
+    top: 1px;
+    bottom: 100%;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: grey; }
+  nav li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px; }
+  nav a {
+    font-size: 20px; }
+  nav ul.show {
+    left: 0; }
+  main {
+    align-items: center;
+    text-align: center; }
+    main .about-info {
+      grid-template-areas: 'infoimage' 'info' 'job1'  'job2'  'job3';
+      grid-template-columns: 1fr; }
+    main .project {
+      grid-template-columns: repeat(3, 1fr); }
+  a {
+    margin-right: 10px; } }
+
+@media screen and (max-width: 468px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .project {
+    grid-template-columns: 1fr; } }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none; }
+
+html {
+  font-size: 16px; }
+
+body {
+  background: white;
+  color: #080101;
+  height: 100%;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  font-weight: 800; }
+  body#bg-img {
+    background: url(../img/try.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 1px;
+  line-height: 1;
+  color: #36d2d2;
+  text-align: left; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 3rem;
+    padding: 1vh;
+    position: fixed;
+    width: 40%;
+    top: 10%;
+    text-align: left;
+    margin: auto; }
+
+a {
+  color: #c92064;
+  text-decoration: none;
+  padding: 7px; }
+  a:hover {
+    color: blue; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #0d0256; }
+
+.text-quinary {
+  color: #10c7d1; }
+
+main {
+  padding: 8.5rem; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 25vh; }
+
+.about lg-heading {
+  position: fixed; }
+
+.about-info {
+  margin: 20px auto;
+  width: 100%;
+  padding: 6px;
+  display: grid;
+  grid-template-areas: 'infoimage info info' 'job1 job2 job3';
+  grid-gap: 35px;
+  grid-template-columns: repeat(3, 1fr); }
+
+.info-image {
+  grid-area: infoimage; }
+
+.info {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+  font-weight: 50;
+  text-decoration: none;
+  grid-area: info; }
+
+.info-image {
+  height: 240px;
+  width: 370px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  padding: 1px;
+  border: 2px solid black;
+  float: left;
+  grid-area: infoimage; }
+
+.job-1 {
+  grid-area: job1; }
+
+.job-2 {
+  grid-area: job2; }
+
+.job-3 {
+  grid-area: job3; }
+
+.job {
+  line-height: 2rem;
+  background: #e3fcfd;
+  padding: 1.5rem;
+  border-top: #0d0256 2px solid;
+  border-left: #0d0256 2px solid;
+  border-right: #0d0256 2px solid;
+  border-bottom: #0d0256 2px solid; }
+
+.project img {
+  height: 80px;
+  border: 4px solid black;
+  padding: 1px;
+  margin: 0 10px 0 10px; }
+
+.project img:hover {
+  border: 4px solid #10c7d1; }
+
+.preview img {
+  border: 4px solid #0d0256;
+  padding: 1px;
+  width: 850px;
+  align-items: center; }
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333; }
+
+.container .email-signature {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  background: #222;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #000;
+  padding: 10px 40px;
+  position: relative;
+  overflow: hidden; }
+
+.container .email-signature .image img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative; }
+
+.container .email-signature .content {
+  padding-left: 60px; }
+
+.container .email-signature .content .name {
+  padding-left: 10px;
+  font-size: 25px;
+  color: #f0f0f0; }
+
+.container .email-signature .content .post {
+  font-size: 15px;
+  padding: 10px 0;
+  margin: 10px 5px;
+  border-radius: 50px;
+  background: #ccc;
+  color: #333;
+  text-align: left; }
+
+.container .email-signature .content .contact {
+  margin-top: 30px; }
+
+.container .email-signature .content .contact li {
+  list-style-type: none;
+  margin: 10px 0;
+  color: #ccc;
+  font-weight: 600;
+  letter-spacing: 2px; }
+
+.container .email-signature .content .contact li i {
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  background: #2c3e50;
+  margin-right: 10px;
+  color: #fff; }

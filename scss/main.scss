@@ -1,0 +1,363 @@
+@import 'config';
+@import 'menu';
+@import 'mobile';
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    @include background;
+    background: white;
+   
+    color: rgb(8, 1, 1);
+    height: 100%;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.5;
+    font-weight: 800;
+    
+
+    
+
+}
+
+//Headings
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 1px;
+    line-height: 1;
+    color: #36d2d2;
+    text-align: left;
+    
+    
+   
+
+    
+
+    &.lg-heading {
+        font-size: 3rem;
+       
+        padding: 1vh;
+        position: fixed;
+        width: 40%;
+        top: 10%;
+        text-align: left;
+        margin: auto;
+     
+        
+        
+        
+        
+        
+        
+        
+    
+    }
+
+   
+
+    
+}
+
+a {
+    color: rgb(201, 32, 100);
+    text-decoration: none;
+    padding: 7px;
+
+    &:hover{
+        color: blue;
+    }
+
+    
+   
+}
+
+
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+
+.text-quinary {
+    color: $quinary-color;
+}
+
+
+
+main {
+    padding: 8.5rem;
+   
+  
+
+    &#home {
+        overflow: hidden;
+
+        h1 {
+            margin-top: 25vh;
+        }
+    }
+
+    
+   
+        
+
+    
+}
+
+.about {
+    lg-heading {
+        position: fixed;
+    }
+}
+
+
+
+.about-info {
+    margin: 20px auto;
+    width: 100%;
+    padding: 6px;
+    display: grid;
+    grid-template-areas:
+    'infoimage info info'
+    'job1 job2 job3';
+    grid-gap: 35px;
+    grid-template-columns: repeat(3, 1fr);
+   
+
+    
+}
+
+.info-image {
+    grid-area: infoimage;
+}
+
+
+.info {
+    font-family:'Times New Roman', Times, serif;
+    font-size: medium;
+    font-weight: 50;
+    text-decoration: none;
+    grid-area: info;
+    
+
+}
+
+.info-image {
+    height: 240px;
+    width: 370px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    text-align:left;
+   
+    padding: 1px;
+    border: 2px solid black;
+    float: left;
+    grid-area: infoimage;
+ 
+    
+    
+    
+    
+}
+
+.job-1 {
+    grid-area: job1;
+}
+
+.job-2 {
+    grid-area: job2;
+}
+
+.job-3 {
+    grid-area: job3;
+}
+
+
+.job {
+    line-height: 2rem;
+    background: lighten($quinary-color, 50);
+    padding: 1.5rem;
+    border-top: $secondary-color 2px solid;
+    border-left: $secondary-color 2px solid;
+    border-right: $secondary-color 2px solid;
+    border-bottom: $secondary-color 2px solid;
+    
+    
+    
+}
+
+
+.project img {
+    height: 80px;
+    border: 4px solid black;
+    padding: 1px;
+    margin: 0 10px 0 10px;
+    
+}
+
+.project img:hover {
+    border: 4px solid $quinary-color;
+
+}
+
+.preview img {
+ border: 4px solid $secondary-color;
+ padding: 1px;
+ width: 850px;
+ align-items: center;
+}
+
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+}
+
+.container .email-signature {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    background: #222;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #000;
+    padding: 10px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .email-signature .image img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+
+}
+
+
+
+
+.container .email-signature .content{
+    padding-left: 60px;
+}
+
+.container .email-signature .content .name {
+    padding-left: 10px;
+    font-size: 25px;
+    color: #f0f0f0;
+    ;
+}
+
+.container .email-signature .content .post {
+    font-size: 15px;
+    padding: 10px 0;
+    margin: 10px 5px;
+    border-radius: 50px;
+    background: #ccc;
+    color: #333;
+    text-align: left;
+}
+
+.container .email-signature .content .contact {
+    margin-top: 30px;
+}
+
+.container .email-signature .content .contact li {
+    list-style-type: none;
+    margin: 10px 0;
+    color:#ccc;
+    font-weight: 600;
+    letter-spacing: 2px;
+    
+
+
+}
+
+
+.container .email-signature .content .contact li i{
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    background: #2c3e50;
+    margin-right: 10px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+   
+
+
+   
+    
+
+
+
+
+
+
+   
+   
+   
+ 
+    
+   
+    
+
+
+
+   
+
+ 
+
+
+
+    
+    
+
+   
+
+    
+
+
+    
+
+    
+    
+
+
